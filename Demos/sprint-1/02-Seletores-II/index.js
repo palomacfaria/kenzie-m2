@@ -22,4 +22,12 @@ const headingOne = document.getElementsByClassName("realeses-title");
 console.log(headingOne);
 headingOne[0].innerText = "Lançamentos alterados pelo DOM";
 }
-slectorExemplo();
+//slectorExemplo();
+
+//Criando um novo H2
+const h2 = document.createElement("h2");
+h2.innerHTML = "Este é um texto h2";
+
+//Buscando uma referência
+const main = document.querySelector("main");
+main.appendChild(h2);
