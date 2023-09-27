@@ -6,8 +6,7 @@ body{
 }
 main{
     width: 80%;
-    /*margin: 0 auto;*/
-    margin-inline: auto;
+    margin: 3rem auto;
 }
 /*16px -> 1rem(tamanho padrão da fonte) se o valor for alterado o rem será proporcional*/
 .realeses__title{
