@@ -33,8 +33,12 @@ main{
 .movie__poster{
     width: 30%;
 }
-
-.movie__title, .movie__genere, .movie__synopsis{
+.movie__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.movie__title, .movie__genere, .movie__synopsis, .movie__star-reating{
     /* padding: 4.8px; */
     padding-block: 4.8px;
     line-height: 22.4px;
@@ -46,4 +50,54 @@ main{
 .movie__genere{
     font-size: 17.6px;
     color: #888888;
+    display: inline-flex;
+}
+.movie__rating{
+    font-size: 0.9rem;
+    font-weight: 500;
+    /*border: 1px solid black;*/
+    padding: 0.4rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+}
+.movie__rating--pg-13{
+    background-color: rgb(233, 191, 5);
+    color: white;
+    box-shadow: 3px 3px rgba(233, 191, 5, 0.37);
+}
+.movie__rating--r{
+    background-color: rgb(224, 13, 13);
+    color: white;
+    box-shadow: 3px 3px rgba(224, 13, 13, 0.37);
+}
+.movie__rating--g{
+    background-color: rgb(21, 216, 14);
+    color: white;
+    box-shadow: 3px 3px rgba(21, 216, 14, 0.37);
+}
+.movie__star-reating{
+    display: flex;
+    gap: 0.4rem;
+    font-size: 1.5rem;
+}
+.star-checked{
+    color: orange;
+}
+.movie__actions{
+    align-self: flex-end;
+    display: flex;
+    gap: 1rem;
+}
+.movie__actions-button{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px gray;
+
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.movie__actions-button:hover{
+    background-color: #216b33;
+    color: white;
 }

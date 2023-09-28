@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Movies</title>
+    <!--Styles-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <!--Script-->
     <script src="./index.js" defer></script>
-    <title>Document</title>
 </head>
 <body>
     <main id="main__id" class="main__class">
@@ -14,14 +24,28 @@
             <h1 id="h1__id" class="realeses__title">Lançamentos</h1>
 
             <ul class="movies">
-                <!-- <li class="movie">
+                <li class="movie">
                     <img class="movie__poster" src="./imgs/poster-matrix.jpg" alt="Poster do filme Matrix">
-                    <div class="movie__info">
-                        <h3 class="movie__title">Matrix</h3>
-                        <h4 class="movie__genere">Ficção Ciêntifica</h4>
-                        <p class="movie__synopsis">O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.</p>
+                    <div class="movie__content">
+                        <div class="movie__info">
+                            <h3 class="movie__title">Matrix</h3>
+                            <h4 class="movie__genere">Ficção Ciêntifica</h4>
+                            <span class="movie__rating movie__rating--pg-13">PG-13</span>
+                            <div class="movie__star-reating">
+                            <i class="fa fa-star star-checked"></i>
+                            <i class="fa fa-star star-checked"></i>
+                            <i class="fa fa-star star-checked"></i>
+                            <i class="fa fa-star star-checked"></i>
+                            <i class="fa fa-star"></i>
+                            </div>
+                            <p class="movie__synopsis">O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.</p>
+                        </div>
+                        <div class="movie__actions">
+                            <button class="movie__actions-button">Adicionar a watchlist</button>
+                            <button class="movie__actions-button" >Alugar</button>
+                        </div>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </section>
     </main>
