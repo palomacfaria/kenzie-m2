@@ -142,7 +142,7 @@ function renderCards(movieList){
   //*Inserindo nossa estrutura dentro do pai (ul)
   const ulMovies = document.querySelector(".movies");
 
-  //ulMovies.innerHTML = "";
+  ulMovies.innerHTML = "";
   console.log(ulMovies);
 
   for(let i = 0; i < movieList.length; i++){

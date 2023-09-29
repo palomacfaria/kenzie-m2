@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .block {
+    width: 200px;
+    height: 200px;
+    background-color: #0278ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    color: #ffffff;
+    font-size: 128px;
+  }
+  
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  li {
+    list-style: none;
+    width: 200px;
+    height: 290px;
+    background-color: #ffebcd;
+    padding: 16px;
+    border: 2px solid #000000;
+  }
+  
+  .statusCard {
+    height: 50px;
+    width: 200px;
+    background-color: #d3d3d3;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  span {
+    background-color: #808080;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    background-color: #00026b;
+  }
+  
+  .itemCard {
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border: dashed #ffffff;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  
+  .online {
+    background-color: #008000;
+  }
+  
+  .offline {
+    background-color: #ff0000;
+  }
