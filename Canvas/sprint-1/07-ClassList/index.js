@@ -6,7 +6,7 @@ function changeStyle() {
 
     for (let i = 0; i < divs.length; i++) {
         const div = divs[i];
-        div.classList.toggle("circle")
+        div.classList.toggle("circle");
     }
 
     
@@ -29,4 +29,5 @@ function changeStyle() {
         }
     }
 }
+changeStyle();
 changeStyle();
