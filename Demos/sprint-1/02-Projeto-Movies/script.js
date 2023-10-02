@@ -1,13 +1,15 @@
 const movies = [
   {
+    id: 1,
     title: "Matrix",
     poster: "./imgs/poster-matrix.jpg",
-    genere: "Ficção CIêntifica",
+    genere: "Ficção Ciêntifica",
     release: false,
     reted: "R",
     synopsis: "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia."
   },
   {
+    id: 2,
     title: "O Poderoso Chefão",
     poster: "./imgs/poster-o-poderoso-chefao.webp",
     genere: "Drama",
@@ -16,6 +18,7 @@ const movies = [
     synopsis: "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefão Vito Corleone incapacitado e força os filhos Michael e Sonny a assumir os negócios."
   },
   {
+    id: 3,
     title: "A Origem",
     poster: "./imgs/poster-a-origem.jpg",
     genere: "Ação",
@@ -24,6 +27,7 @@ const movies = [
     synopsis: "Dom Cobb é um ladrão com a rara habilidade de roubar segredos do inconsciente, obtidos durante o estado de sono. Impedido de retornar para sua família, ele recebe a oportunidade de se redimir ao realizar uma tarefa aparentemente impossível: plantar uma ideia na mente do herdeiro de um império. Para realizar o crime perfeito, ele conta com a ajuda do parceiro Arthur, o discreto Eames e a arquiteta de sonhos Ariadne. Juntos, eles correm para que o inimigo não antecipe seus passos."
   },
   {
+    id: 4,
     title: "As Branquelas",
     poster: "./imgs/poster-as-branquelas.jpg",
     genere: "Comédia",
@@ -32,6 +36,7 @@ const movies = [
     synopsis: "Dois irmãos agentes do FBI, Marcus e Kevin Copeland, acidentalmente evitam que bandidos sejam presos em uma apreensão de drogas. Como castigo, eles são forçados a escoltar um par de socialites nos Hamptons. Quando as meninas descobrem o plano da agência, elas se recusam a ir. Sem opções, Marcus e Kevin, dois homens negros, decidem fingir que são as irmãs e se transformam em um par de loiras."
   },
   {
+    id: 5,
     title: "Para Sempre",
     poster: "./imgs/poster-para-sempre.jpg",
     genere: "Romance",
@@ -40,6 +45,8 @@ const movies = [
     synopsis: "Paige e Leo são felizes recém-casados, mas um acidente deixa Paige em coma. Quando ela acorda, não reconhece Leo, tem problemas de relacionamento com os pais e se sente atraída pelo ex-noivo. Mas Leo está determinado a reconstruir seu casamento."
   },
 ];
+
+let watchlistMovies = [];
 
 function createMovieCard(movieInfo) {
   //*Criando elementos necessários
@@ -131,6 +138,31 @@ function createMovieCard(movieInfo) {
   btnMovieRent.innerText = "Alugar";
   btnMovieRent.classList.add("movie__actions-button");
 
+  btnMovieWatchList.id = movieInfo.id;
+  btnMovieWatchList.addEventListener("click", function(event){
+    //console.log(event.target.id);
+    let movieExists = false;
+
+    for(let i = 0; i < watchlistMovies.length; i++){
+      const currentWatchlistMovies = watchlistMovies[i];
+
+      if(currentWatchlistMovies.id == event.target.id){
+        movieExists = true;
+      }
+    }
+
+    if(movieExists === false){
+      for(let i = 0; i < movies.length; i++){
+        const currentMovie = movies[i];
+  
+        if(currentMovie.id == event.target.id){
+          watchlistMovies.push(currentMovie);
+        }
+      }
+    }
+    renderWatchlistCards(watchlistMovies);
+  })
+
   console.log(liMovie);
 
   return liMovie;
@@ -152,3 +184,44 @@ function renderCards(movieList){
   }
 }
 renderCards(movies);
+
+//Mostrando cards laterais (watchlist)
+function renderWatchlistCards(movieList) {
+  const ulWatchlist = document.querySelector(".watchlist__list");
+
+  ulWatchlist.innerHTML = "";
+
+  for (let i = 0; i < movieList.length; i++) {
+    const currentMovie = movieList[i];
+
+    const card = createWatchlistCard(currentMovie);
+
+    ulWatchlist.appendChild(card);
+  }
+}
+
+//Criando cards laterais (watchlist)
+function createWatchlistCard(movieInfo) {
+  const liMovie = document.createElement("li");
+
+  const divMovieInfo = document.createElement("div");
+  const imgMoviePoster = document.createElement("img");
+  const h3MovieTitle = document.createElement("h3");
+  const h4MovieGenre = document.createElement("h4");
+
+  imgMoviePoster.src = movieInfo.poster;
+  imgMoviePoster.classList.add("movie__poster");
+
+  h3MovieTitle.innerText = movieInfo.title;
+  h3MovieTitle.classList.add("movie__title");
+
+  h4MovieGenre.innerText = movieInfo.genere;
+  h4MovieGenre.classList.add("movie__genere");
+
+  liMovie.classList.add("movie");
+
+  divMovieInfo.append(h3MovieTitle, h4MovieGenre);
+  liMovie.append(imgMoviePoster, divMovieInfo);
+
+  return liMovie;
+}
