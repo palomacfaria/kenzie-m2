@@ -112,18 +112,45 @@ function createMovieCard(movieInfo) {
   }
 
   //Estrelas (div)
+
   divMovieStarReating.classList.add("movie__star-reating");
 
   for(let i = 0; i < 5; i++){
     const iStarIcon = document.createElement('i');
     iStarIcon.classList.add("fa", "fa-star");
 
-    if(i < 4){
+    iStarIcon.id = "star-" + (i + 1);
+    /* if(i < 4){
       iStarIcon.classList.add("star-checked");
-    }
+    } */
 
     divMovieStarReating.appendChild(iStarIcon);
   }
+  /*
+    1- Adicionar um ID em cada estrela baseada na sua posição. (OK)
+    2- Adicionar um escutador de evento de click na div. (OK)
+    3- Armazenar os filhos da div em uma variável.
+    4- Fazer um loop de 0 a 5.
+      a- Identificar a estrela clicada. (OK)
+      b- Identificar o ID da estrela clicada (OK)
+      c- Se o número da iteração atual for menor que o ID da estrela clicada, adiciona a classe estilizada.
+      d- Se não, remove a classe estilizada.
+  */
+  divMovieStarReating.addEventListener('click', function(event){
+    //Pegando todas as estrelas
+    const allStars =event.currentTarget.children;
+
+    for(let i = 0; i < 5; i++){
+      const iStarIcon = event.target;
+      const starNumber = iStarIcon.id[5];
+
+      if(i < starNumber){
+        allStars[i].classList.add("star-checked");
+      }else{
+        allStars[i].classList.remove("star-checked");
+      }
+    }
+  });
 
   //Spinose (p)
   pMovieSinopse.innerText = movieInfo.synopsis;
@@ -208,6 +235,36 @@ function createWatchlistCard(movieInfo) {
   const imgMoviePoster = document.createElement("img");
   const h3MovieTitle = document.createElement("h3");
   const h4MovieGenre = document.createElement("h4");
+  /*
+    1- Criar um botão em cada card da watchlist. (OK)
+    2- Adicionar um ID no botão relativo ao ID do filme. (OK)
+    3- Adicionar um escutador de evento de click. (OK)
+      a- Percorrer o array da watchlist. (OK)
+      b - Colocar os objetos que tem o ID diferente do botão em um array auxiliar. (OK)
+      c- Reatribuir o array da watchlist com o array auxiliar.
+      d- Renderizar a watchlist. (OK)
+  */
+  const btnRemove = document.createElement("button");
+  
+  btnRemove.innerText = "Remover da lista";
+  btnRemove.classList.add("movie__actions-button");
+  btnRemove.id = "remove-" + movieInfo.id;
+  btnRemove.addEventListener('click', function(event){
+    let newWatchliist = [];
+
+    for(let i = 0; i < watchlistMovies.length; i++){
+      const currentMovie = watchlistMovies[i];
+      //console.log(event.target.id[7]);
+      const btnRef = event.target.id[7];
+
+      if(currentMovie.id != btnRef){
+        newWatchliist.push(currentMovie);
+      }
+    }
+
+    watchlistMovies = newWatchliist;
+    renderWatchlistCards(watchlistMovies);
+  });
 
   imgMoviePoster.src = movieInfo.poster;
   imgMoviePoster.classList.add("movie__poster");
@@ -220,7 +277,7 @@ function createWatchlistCard(movieInfo) {
 
   liMovie.classList.add("movie");
 
-  divMovieInfo.append(h3MovieTitle, h4MovieGenre);
+  divMovieInfo.append(h3MovieTitle, h4MovieGenre, btnRemove);
   liMovie.append(imgMoviePoster, divMovieInfo);
 
   return liMovie;

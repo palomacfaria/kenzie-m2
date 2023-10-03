@@ -81,6 +81,9 @@ main{
 .movie__star-reating{
     display: flex;
     gap: 0.4rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 .star-checked{
     color: orange;
