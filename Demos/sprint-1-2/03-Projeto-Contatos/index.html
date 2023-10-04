@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Agenda de Contatos</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <h1 class="header__title">Agenda de Contatos</h1>
+      <section>
+        <h2 class="section__subtitle">Adicionar um contato</h2>
+
+        <form class="create__form">
+          <input
+            class="create__input"
+            id="input-name"
+            type="text"
+            placeholder="Digite um nome"
+          />
+          <input
+            class="create__input"
+            id="input-contact"
+            type="text"
+            placeholder="Digite o contato"
+          />
+          <select id="select-type">
+            <option value="">Selecione um tipo</option>
+            <option value="email">Email</option>
+            <option value="phone">Telefone</option>
+          </select>
+          <button id="create__button">Cadastrar</button>
+        </form>
+      </section>
+      <section>
+        <h2 class="section__subtitle">Buscar um contato</h2>
+        <form class="search__form">
+          <input
+            class="search__input"
+            type="text"
+            placeholder="Insira um nome"
+          />
+          <button search__button>Pesquisar</button>
+        </form>
+      </section>
+    </header>
+    <main class="contacts__container">
+      <h2 class="contacts__title">Contatos</h2>
+      <ul></ul>
+    </main>
+  </body>
+</html>
