@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outros Tipos de Eventos</title>
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- SCRIPTS -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="main__title">Interagindo com Eventos</h1>
+    <form class="form__container">
+      <label for="input-name">Nome</label>
+      <input
+        id="input-name"
+        class="input__box--text"
+        type="text"
+        placeholder="Digite seu nome..."
+      />
+      <label for="select-pet">Escolha um pet</label>
+      <select id="select-pet" class="input__box--select">
+        <option value="cachorro">Cachorro</option>
+        <option value="gato">Gato</option>
+        <option value="hamster">Hamster</option>
+        <option value="papagaio">Papagagio</option>
+        <option value="aranha">Aranha</option>
+        <option value="peixe">Peixe</option>
+      </select>
+      <button class="form__btn--submit">Enviar</button>
+    </form>
+  </body>
+</html>
