@@ -1,0 +1,27 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(224, 224, 224);
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.saleOff{
+    position: relative;
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+    background-color: brown;
+    color: white;
+    font-size: 32px;
+}
+
+.saleNone{
+    display: none;
+}
