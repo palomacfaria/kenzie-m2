@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+}
+.button__icon {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 20px;
+}
+.button--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
