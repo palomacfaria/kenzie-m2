@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position CSS</title>
+  </head>
+  <body>
+    <!--POSITION: STATIC-->
+    <div>
+      <p>Este é um parágrafo</p>
+      <p>Este é outro parágrafo</p>
+    </div>
+
+    <!--POSITION: RELATIVE-->
+    <div style="position: relative; top: 10px; left: 10px">
+      <p>Este é um parágrafo</p>
+      <p>Este é outro parágrafo</p>
+    </div>
+
+    <!--POSITION: ABSOLUTE-->
+    <div style="position: relative">
+      <div style="position: absolute; top: 20px; left: 20px">
+        <p>Este é um parágrafo</p>
+      </div>
+    </div>
+
+    <!--POSITION: FIXED-->
+    <div style="position: fixed; top: 0; left: 0">
+      <p>Este é um parágrafo</p>
+    </div>
+
+    <!--POSITION: STICKY-->
+    <div style="position: sticky; top: 0">
+      <p>Este é um parágrafo</p>
+    </div>
+  </body>
+</html>
