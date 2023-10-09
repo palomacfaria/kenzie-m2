@@ -1,0 +1,16 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color-primary: #ffc700;
+    --gray-100: #000000;
+    --gray-500: #eeeeee;
+    --gray-700: #fafafa;
+    --gray-900: #ffffff;
+
+    --font-primary: 'Inter', sans-serif;
+    --font-size-default: 2.25rem;
+
+    --radius-default: 1rem;
+    --radius-small: 0.5rem;
+}
