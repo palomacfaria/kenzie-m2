@@ -12,15 +12,116 @@
     <script src="./src/scripts/index.js" defer></script>
 </head>
 <body>
-    <div>
-        <h1>Homepage</h1>
-    </div>
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque ut corrupti non pariatur porro minus quisquam quia sunt impedit libero, inventore tenetur asperiores hic perspiciatis qui et unde labore?</p>
-    </section>
-
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-    </div>
+    <header class="header__container">
+        <h1 class="header__logo">Food <em>Delivery</em></h1>
+        <div class="header__links">
+          <a href="#">Cardápio</a>
+          <a href="#">Sobre nós</a>
+        </div>
+      </header>
+      <section class="banner__container">
+        <p class="banner__text">O Delivery ideal para o seu tipo de fome!</p>
+        <div class="banner__info">
+          <div class="info__card">
+            <i class="fa fa-clipboard-question"></i>
+            <p>1. Escolha</p>
+          </div>
+          <div class="info__card">
+            <i class="fa fa-clipboard-list"></i>
+            <p>2. Peça</p>
+          </div>
+          <div class="info__card">
+            <i class="fa fa-clipboard-check"></i>
+            <p>3. Receba</p>
+          </div>
+        </div>
+      </section>
+      <section class="popular__container">
+        <h1 class="popular__title">Mais pedidos</h1>
+        <div class="popular__items">
+          <img class="popular__image" src="./src/assets/steak.svg" alt="Imagem de churrasco" />
+          <img class="popular__image" src="./src/assets/sushi.svg" alt="Imagem de sushi" />
+          <img class="popular__image" src="./src/assets/burgers.svg" alt="Imagem de hamburguer" />
+          <img class="popular__image" src="./src/assets/strawberry-cake.svg" alt="Imagem de bolo de morango"/>
+          <img class="popular__image" src="./src/assets/fruit-salad.svg" alt="Imagem de salada de fruta"/>
+        </div>
+      </section>
+      <main class="main__container">
+        <section class="menu__container">
+          <h1 class="menu__title">Cardápio</h1>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+            <li class="menu__item">
+              <img src="./src/assets/burgers.svg" alt="Imagem de hamburger" />
+              <h2 class="item__title">Hamburger</h2>
+              <p>R$ 15.00</p>
+              <button class="item__button-add">
+                <i class="fa fa-cart-plus"></i>
+                <p>Adicionar</p>
+              </button>
+            </li>
+          </ul>
+        </section>
+        <div class="cart__container">
+          <div class="cart__header">
+            <i class="fa fa-cart-shopping"></i>
+            <h2>Carrinho</h2>
+          </div>
+          <ul class="cart__list">
+            <li class="cart__item">
+              <p>Nenhum produto adicionado ao carrinho!</p>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer__container">
+        <p class="footer__text">
+          O Delivery mais rápido do mercado © Todos os direitos reservados. 2023
+        </p>
+      </footer>
 </body>
 </html>
