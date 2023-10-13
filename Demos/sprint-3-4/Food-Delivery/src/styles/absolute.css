@@ -2,18 +2,20 @@
 
 body {
   background-color: var(--gray-100);
+  display: flex;
+  justify-content: center;
 }
 
 main {
   width: 500px;
-  margin: 5rem auto;
+  margin-block: 5rem;
   padding: 5rem;
   background-color: aquamarine;
+  position: relative;
 }
 
 div {
   border: var(--border-default);
-  position: relative;
 }
 
 p {
@@ -22,9 +24,12 @@ p {
 
 button {
   font-size: 2rem;
-
+  /*O position absolute precisa de um pai com o position diferente do static(valor default)*/
   position: absolute;
 
-  top: 2rem;
-  right: 2rem;
+  top: 0;
+  right: -2rem;
+
+  /*Trabalha com camadas trazendo para frente ou jogando para trás*/
+  z-index: 1;
 }

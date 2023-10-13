@@ -1,0 +1,25 @@
+@import url("./globalStyles.css");
+
+body{
+    background-color: var(--gray-100);
+}
+main{
+    width: 500px;
+    margin: 5rem auto;
+    padding: 5rem;
+    background-color: aquamarine;
+}
+div{
+    border: var(--border-default)
+}
+p{
+    margin-block: 2rem;
+}
+button{
+    /*Fixa na tela e conforme a pagina é scrolada ele fica fixo na tela*/
+    font-size: 2rem;
+    
+    position: fixed;
+    bottom: 5rem;
+    left: 5rem;
+}

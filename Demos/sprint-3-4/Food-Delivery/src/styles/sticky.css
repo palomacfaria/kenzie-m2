@@ -1,0 +1,25 @@
+@import url("./globalStyles.css");
+
+body{
+    background-color: var(--gray-100);
+}
+main{
+    width: 500px;
+    margin: 5rem auto;
+    padding: 5rem;
+    background-color: aquamarine;
+}
+div{
+    border: var(--border-default)
+}
+p{
+    margin-block: 2rem;
+}
+button{
+    font-size: 2rem;
+    position: sticky;
+
+    /*Até que suas propriedades sejam atingidas o sticky fica na sua posição inicial, depois de atingido ele atinge um comportamento parecido com o fixed ao scrolar a tela, assim que o seu elemento pai some da tela ao scrolar o sticky também sai*/
+
+    bottom: 10rem;
+}

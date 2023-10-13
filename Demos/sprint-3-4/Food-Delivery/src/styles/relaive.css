@@ -1,0 +1,32 @@
+@import url("./globalStyles.css");
+
+body{
+    background-color: var(--gray-100);
+}
+main{
+    width: 500px;
+    margin: 5rem auto;
+    padding: 5rem;
+    background-color: aquamarine;
+}
+div{
+    border: var(--border-default)
+}
+p{
+    margin-block: 2rem;
+}
+button{
+    font-size: 2rem;
+    position: relative;
+    /*
+        top
+        bottom
+        left
+        right
+        z-index
+    */
+    top: 15rem;
+    left: 8rem;
+
+    cursor: pointer;
+}
