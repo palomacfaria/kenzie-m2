@@ -7,12 +7,18 @@
 /* CABEÇALHO */
 
 .header__container {
+  width: 100%;
   height: 80px;
   background-color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 2rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header__logo {
@@ -33,7 +39,41 @@ a:hover {
 
 .banner__container {
   background: url("../assets/background.jpg") no-repeat center/100%;
+  margin-top: 80px;
   height: 360px;
+  position: relative;
+}
+.banner__text{
+  width: 330px;
+  font-size: 42px;
+  text-align: right;
+  color: var(--gray-900);
+
+  position: absolute;
+  top: 2rem;
+  right:2rem;
+}
+.banner__info{
+  width: 60%;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  bottom: -30px;
+  left: 20%;
+}
+.info__card{
+  width: 160px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border: var(--border-default);
+  border-radius: var(--radius-default);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
 }
 
 /* MAIS PEDIDOS */
@@ -102,10 +142,14 @@ a:hover {
   height: 290px;
   background-color: var(--gray-500);
   margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .item__title {
@@ -114,14 +158,17 @@ a:hover {
 
 .item__button-add {
   font-size: 1rem;
+  background-color: var(--color-primary);
+  border: var(--border-default);
+  border-radius: var(--radius-small);
 
   display: flex;
   align-items: center;
   gap: 0.5rem;
 
-  background-color: var(--color-primary);
-  border: var(--border-default);
-  border-radius: var(--radius-small);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 /* CARRINHO */
@@ -129,9 +176,11 @@ a:hover {
 .cart__container {
   height: 220px;
   background-color: var(--gray-500);
-
   margin-top: 4rem;
   border-radius: 16px 16px 0 0;
+
+  position: sticky;
+  top: 100px;
 }
 
 .cart__header {
