@@ -1,0 +1,22 @@
+@import url("./reset.css");
+
+:root {
+  --grey-1: #212529;
+  --grey-2: #495057;
+  --grey-3: #ced4da;
+  --grey-4: #f8f9fa;
+  --grey-5: #ffffff;
+
+  --font-text: 16px;
+  --radius-1: 8px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
