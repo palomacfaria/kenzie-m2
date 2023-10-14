@@ -1,0 +1,48 @@
+.box{
+    width: 300px;
+    height: 300px;
+    border: 3px solid #000000;
+    margin: 50px auto; /* centralizado horizontalmente*/
+
+    position: relative;
+}
+.box__item{
+    width: 100px;
+    height: 100px;
+  }
+  
+.box__item--blue{ 
+    width: 50%;
+    height: 50%;
+    border-radius: 0.5rem;
+    background-color: DarkSlateBlue;
+
+    position: absolute;
+    left: 0px;
+}
+.box__item--gray{ 
+    width: 50%;
+    height: 50%;
+
+    border-radius: 0.5rem;
+    background-color: DarkSlateGray;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.box__item--blue{
+    position: absolute;
+}
+.box__item--online{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+
+    width: 5rem;
+    height: 2rem;  
+    border-radius: 0.5rem;
+    padding: 5px 8px;
+    color: #ffffff;
+    background-color: #009966;
+}
