@@ -1,21 +1,20 @@
 function handleUserModal() {
   const userCard = document.querySelector(".user__container");
-  const modalController = document.querySelector("#userModalController");
 
-  //   console.log(userCard);
-  //   console.log(modalController);
+  const modalControler = document.querySelector("#userModalController");
 
   userCard.addEventListener("click", function () {
-    modalController.showModal();
+    modalControler.showModal();
   });
 }
 
 function closeUserModal() {
   const userButtonClose = document.querySelector("#closeUserModal");
-  const modalController = document.querySelector("#userModalController");
+
+  const modalControler = document.querySelector("#userModalController");
 
   userButtonClose.addEventListener("click", function () {
-    modalController.close();
+    modalControler.close();
   });
 }
 
@@ -29,24 +28,24 @@ function handleServicesModal() {
 
   for (let i = 0; i < servicesItems.length; i++) {
     const currentItem = servicesItems[i];
-
-    // console.log(currentItem);
-
     currentItem.addEventListener("click", function (event) {
-      //   console.dir(event.target);
-
+      //Pegando o texto do primeiro filho do card clicado
       const text = event.target.children[0].innerText;
+      console.log(text);
 
-      //   console.log(text);
-
+      //Limpa o modal
       modalController.innerHTML = "";
 
+      //Cria o modal
       const modalContent = createModalContent(text);
 
+      //Coloca o elemento dentro do modal
       modalController.appendChild(modalContent);
 
+      //Abre o modal
       modalController.showModal();
 
+      //Chamando a função que possui o botão fechar
       closeServicesModal();
     });
   }
@@ -60,7 +59,7 @@ function createModalContent(textName) {
 
   title.innerText = textName;
   text.innerText =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae beatae, laboriosam accusantium doloribus a nesciunt eos exercitationem blanditiis recusandae tenetur minima nobis rem assumenda poro minus, asperiores, deserunt fugit!";
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas rem veniam harum laudantium in beatae perferendis, quam pariatur atque! Dolorem quos cum ea eos reprehenderit recusandae veritatis omnis nesciunt nobis.";
   closeModalButton.innerText = "X";
 
   divContainer.classList.add("modal__container");
@@ -76,13 +75,9 @@ function closeServicesModal() {
   const modalController = document.querySelector("#servicesModalController");
   const closeModalButton = document.querySelector("#closeServicesModal");
 
-  closeModalButton.addEventListener("click", () => {
+  closeModalButton.addEventListener("click", function () {
     modalController.close();
   });
 }
 
 handleServicesModal();
-
-// function nomeDaFuncao(parametro) {}
-
-// const nomeDaFuncaoArrow = (parametros) => {};
