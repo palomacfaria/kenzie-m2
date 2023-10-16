@@ -1,5 +1,6 @@
 @import url("./globalStyles.css");
 
+/*CARD DO USUÁRIO*/
 .user__container {
   width: 500px;
   padding: 16px;
@@ -31,4 +32,53 @@
 }
 .user__name {
   font-size: var(--title-small);
+}
+
+/*SERVIÇOS*/
+.services__container {
+  padding: 16px;
+  border: var(--border-default);
+  border-radius: var(--radius-default);
+  background-color: var(--gray-700);
+}
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.item__card {
+  height: 200px;
+  width: 200px;
+  border: var(--border-default);
+  border-radius: var(--radius-default);
+  background-color: var(--gray-800);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  cursor: pointer;
+}
+.item__card:hover {
+  border-color: var(--color-secondary);
+  background-color: var(--gray-500);
+}
+
+/*MODAL USUÁRIO*/
+.modal__container {
+  border: var(--border-default);
+  border-radius: var(--radius-default);
+  background-color: var(--gray-700);
+  padding: 1rem;
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.555);
+  backdrop-filter: blur(5px);
 }
