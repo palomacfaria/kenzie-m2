@@ -1,0 +1,32 @@
+body, h1, button, div{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+dialog{
+    width: 500px;
+    height: 300px;
+    padding: 0;
+    border: 1px solid black;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal__container{
+    width: 500px;
+    height: 300px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal__container > button{
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: #009966;
+    cursor: pointer;
+}
