@@ -1,0 +1,27 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  --color-primary: #1655dc;
+  --color-secondary: #1e91f0;
+
+  --gray-100: #000000;
+  --gray-500: #161822;
+  --gray-700: #22262e;
+  --gray-800: #363a42;
+  --gray-900: #fafafa;
+
+  --font-family-default: "Inter", sans-serif;
+  --title-small: 22px;
+  --title-medium: 32px;
+  --title-large: 48px;
+
+  --border-default: 2px solid var(--color-primary);
+  --radius-default: 1rem;
+}
+
+body {
+  font-family: var(--font-family-default);
+  color: var(--gray-900);
+  background-color: var(--gray-500);
+}
