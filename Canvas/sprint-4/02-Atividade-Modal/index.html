@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <script src="./src/scripts/modal.js" defer></script>
+
+    <title>Modal Registro</title>
+  </head>
+  <body>
+    <main>
+      <div class="main__container">
+        <section class="slogan">
+          <img src="./src/assets/pair_programming.svg" />
+        </section>
+        <form class="form">
+          <div class="form__group">
+            <label for="email">E-mail</label>
+            <input class="input__box" type="text" name="email" id="email" />
+          </div>
+          <div class="form__group">
+            <label for="password">Senha</label>
+            <input
+              class="input__box"
+              type="text"
+              name="password"
+              id="password"
+            />
+          </div>
+          <a href="#" target="_blank" class="form__forgot-pass"
+            >Esqueceu a senha?</a
+          >
+          <a href="#" target="_blank" class="form__register-link">
+            Ainda não tem conta? Cadastre-se aqui!
+          </a>
+          <dialog id="modalRegister">
+            <div class="modal">
+              <div class="modal__group">
+                <input
+                  class="input__box"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nome"
+                />
+              </div>
+              <div class="modal__group">
+                <input
+                  class="input__box"
+                  type="text"
+                  name="middleName"
+                  id="middleName"
+                  placeholder="Sobrenome"
+                />
+              </div>
+              <div class="modal__group">
+                <input
+                  class="input__box"
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  placeholder="Celular ou email"
+                />
+              </div>
+              <div class="modal__group">
+                <input
+                  class="input__box"
+                  type="password"
+                  name="newPassword"
+                  id="newPassword"
+                  placeholder="Nova senha"
+                />
+              </div>
+
+              <div class="modal__buttons">
+                <button class="button__close">Fechar Modal</button>
+                <button class="button__register">Cadastrar</button>
+              </div>
+            </div>
+          </dialog>
+          <button class="form__login-btn">Entrar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+.modal{
+    display: flex;
+    flex-direction: column;
+}
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.555);
+    backdrop-filter: blur(5px);
+}
+.modal__group > label {
+    color: rgb(85, 26, 139);
+    margin-bottom: 0.5rem;
+}
+.modal__box {
+    border: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    width: 400px;
+}
+.modal__box:focus,
+.modal__box:active {
+    border: none;
+    outline: 1px solid #3d36ba;
+}
+.modal__buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.button__close{
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.button__close:hover{
+    background-color: #fafafa;
+}
+.button__register{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #6c63ff;
+    color: #ffffff;
+}
+.button__register:hover{
+    background-color: #3d36ba;
+}

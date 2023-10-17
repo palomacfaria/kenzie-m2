@@ -1,0 +1,56 @@
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group:last-of-type {
+  margin-bottom: 0;
+}
+
+.form__group > label {
+  color: rgb(85, 26, 139);
+  margin-bottom: 0.5rem;
+}
+
+.input__box {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 400px;
+}
+
+.input__box:focus,
+.input__box:active {
+  border: none;
+  outline: 1px solid #3d36ba;
+}
+
+.form__forgot-pass {
+  font-size: 0.75rem;
+  transition: 0.3s ease;
+}
+
+.form__forgot-pass:hover,
+.form__register-link:hover {
+  text-decoration: underline;
+}
+
+.form__register-link {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.form__login-btn {
+  background-color: #6c63ff;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  margin-top: 1.5rem;
+  padding: 0.875rem 0;
+}
+
+.form__login-btn:hover {
+  background-color: #3d36ba;
+}
