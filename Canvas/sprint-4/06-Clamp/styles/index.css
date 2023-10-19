@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #16181d;
+  color: #98a0b3;
+  line-height: 160%;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+  /*padding: 4rem;*/
+  padding: clamp(1rem, -0.923rem + 7.692vw, 4rem);
+}
+
+h1,
+h2 {
+  line-height: 160%;
+}
+
+h1 {
+  /* font-size: 3.5rem; */
+  font-size: clamp(1.8rem, 0.71rem + 4.359vw, 3.5rem);
+}
+
+h2 {
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.25rem, 0.449rem + 3.205vw, 2.5rem);
+}
+
+p {
+  line-height: 160%;
+  /* font-size: 1.2rem; */
+  font-size: clamp(0.8rem, 0.544rem + 1.026vw, 1.2rem);
+}
