@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 30%;
+    height: 400px;
+    background-color: blue;
+    border: 3px solid white;
+}
+
+@media(max-width: 730px){
+    .card{
+        width: 50%;
+        background-color: green;
+    }
+}
+@media(max-width: 500px){
+    .card{
+        width: 100%;
+        background-color: red;
+    }
+}

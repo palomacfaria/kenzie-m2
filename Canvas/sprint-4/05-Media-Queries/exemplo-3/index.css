@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 2px solid gray;
+}
+nav button{
+    display: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    transition: 1s ease;
+}
+
+@media(max-width: 500px){
+    nav{
+        flex-wrap: wrap;
+    }
+    nav button{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        margin-top: -15rem;
+        pointer-events: none;
+    }
+    .show-menu-mobile{
+        margin-top: 1.5rem;
+        pointer-events: all;
+    }
+}
