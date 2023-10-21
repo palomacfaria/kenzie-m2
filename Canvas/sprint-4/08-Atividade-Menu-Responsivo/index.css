@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+}
+.header__container{
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #002488;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__options{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.options__logo{
+    width: 8rem;
+    cursor: pointer;
+}
+.options__link{
+    display: flex;
+    align-items: center;
+}
+.options__link:hover{
+    color: #002488;
+    font-weight: 500;
+}
+.options__link-span{
+    font-weight: 600;
+}
+.header__find{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}
+.find__content{
+    position: relative;
+}
+.find__search{
+    position: absolute;
+    top: 10px;
+    left: 6px;
+}
+.find__input{
+    width: 12rem;
+    height: 2rem;
+    padding-left: 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.find__profile{
+    cursor: pointer;
+}
+.find__button{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+    .header__options{
+        width: 50%;
+        display: flex;
+        gap: 1.2rem;
+    }
+    .options__logo{
+        width: 5rem;
+    }
+    .options__link{
+        font-size: 0.9rem;
+    }
+    .header__find{
+        width: 40%;
+    }
+    .find__input{
+        width: 10rem;
+    }
+}
+@media(max-width: 425px){
+    .header__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__options{
+        display: flex;
+        justify-content: center;
+    }
+    .options__link{
+        display: none;
+    }
+    .header__find{
+        display: flex;
+        justify-content: center;
+    }
+    .find__content{
+        display: none;
+    }
+    .find__profile{
+        display: none;
+    }
+    .find__button{
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .find__menu{
+        width: 1.5rem;
+    }
+}
