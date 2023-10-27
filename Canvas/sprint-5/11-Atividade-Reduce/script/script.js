@@ -20,19 +20,44 @@ console.log(totalProducts(products));
 
 //3) Vamos deixar mais interessante? Utilizando o nosso array products, crie uma função que filtre apenas os produtos com tamanho GG e retorne a soma dos preços desses produtos.
 function totalProductsSize(array) {
-  return array.filter((tamanho) => {
-    if(tamanho === 'GG'){
-        return array.reduce((acc, cur) => {
-            return acc + cur.size;
-        }, 0)
-    }
-  })
+  const ggProducts = array.filter((product) => product.size === "GG");
+  const ggPrice = ggProducts.reduce((accumulator, product) => {
+    return accumulator + product.price;
+  }, 0);
+
+  return ggPrice;
 }
 console.log(totalProductsSize(products));
 
 //DESAFIO
 //4) Crie uma função que filtre os elementos em promoção e aplique 50% de desconto no preço deles. Após isso, some o valor total desses produtos.
+
+//*Minha Resolução
 function totalProductsSale(array) {
-  return;
+  const saleProducts = array.filter((product) => product.sale === true);
+  const totalSale = saleProducts.reduce((acc, cur) => {
+    return acc + (cur.price / 2); 
+  }, 0);
+  return totalSale;
 }
-// console.log(totalProductsSale(products));
+console.log(totalProductsSale(products));
+
+//*Resolução da Kenzie
+function totalProductsSale(array) {
+  const saleProducts = array.filter((product) => product.sale);
+  const pricesWithDiscount = saleProducts.map((product) => product.price * 0.5);
+  const salePricesTotal = pricesWithDiscount.reduce((accumulator, price) => {
+    return accumulator + price;
+  }, 0);
+
+  return salePricesTotal;
+
+  // Equivalente
+  // return array
+  //   .filter((product) => product.sale)
+  //   .map((product) => product.price * 0.5)
+  //   .reduce((accumulator, price) => {
+  //     return accumulator + price;
+  //   }, 0);
+}
+console.log(totalProductsSale(products));
