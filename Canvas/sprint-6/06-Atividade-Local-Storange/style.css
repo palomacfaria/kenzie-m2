@@ -1,0 +1,65 @@
+@import url(./globalStyles.css);
+body{
+    margin: 0;
+    padding: 0;
+}
+.header__container{
+    margin: 4rem;
+}
+.header__title{
+    text-align: center;
+}
+.main__container{
+    width: 50%;
+    margin: 0 auto;
+}
+.task__container{
+    position: relative;
+}
+.task__input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gray6);
+}
+.task__add{
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--brand1);
+    color: #ffffff;
+
+    position: absolute;
+    top: 0.8rem;
+    right:-1rem;
+
+    cursor: pointer;
+}
+.list__container{
+    position: relative;
+}
+.item__container{
+    width: 100%;
+    padding-inline: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gray5);
+}
+.item__text{
+    padding: 1rem;
+}
+.item__delete{
+    padding: 0.4rem 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gray4);
+    color: var(--gray2);
+
+    position: absolute;
+    top: 0.6rem;
+    right: -1rem;
+
+    cursor: pointer;
+}
