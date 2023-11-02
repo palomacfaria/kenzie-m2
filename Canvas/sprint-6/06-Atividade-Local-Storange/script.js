@@ -83,5 +83,26 @@ function createNewTask(){
     });
 }
 
+//*REMOVENDO TASK LOCALSTORANGE
+function removeTaskLocalStorange(){
+
+}
+
+//*LENDO DADOS LOCALSTORANGE
+function getTaskLocalStorange() {
+    // Pega os dados no localStorage
+    const dadosNoLocalStorageJSON = localStorage.getItem('listaDeAfazeres');
+     
+    // Verifica se os dados existem no localStorage
+    if(dadosNoLocalStorageJSON) {
+    // Transforma os dados de JSON para Javascript válido
+    const dadosNoLocalStorage = JSON.parse(dadosNoLocalStorageJSON);
+ 
+    // Chama a função que renderiza os dados
+    renderTasks(dadosNoLocalStorage);
+    }
+ }
+ 
 renderTasks(tasks);
 createNewTask();
+getTaskLocalStorange();
