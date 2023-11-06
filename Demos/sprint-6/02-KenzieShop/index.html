@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/1d585ba1df.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/scripts/index.js" type="module" defer></script>
+
+    <title>Kenzie Shop</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <h1 class="header__logo">Kenzie Shop</h1>
+      <div class="header__menu">
+        <button class="menu__button">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <span class="menu__quantity">0</span>
+      </div>
+    </header>
+    <main class="main__container">
+      <section class="products__container">
+        <h1 class="products__title">Produtos</h1>
+        <ul class="products__list"></ul>
+      </section>
+      <aside class="cart__container">
+        <h1 class="cart__title">Carrinho</h1>
+        <ul class="cart__list"></ul>
+        <p class="cart__total">Total: R$ 0.00</p>
+      </aside>
+    </main>
+  </body>
+</html>

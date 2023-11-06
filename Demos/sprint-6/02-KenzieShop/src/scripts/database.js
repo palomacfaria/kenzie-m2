@@ -1,0 +1,98 @@
+export const products = [
+  {
+    id: 1,
+    name: "Gabinete",
+    image: "./src/assets/gabinete-1.jpg",
+    price: 600,
+  },
+  {
+    id: 2,
+    name: "Gabinete",
+    image: "./src/assets/gabinete-2.jpg",
+    price: 540,
+  },
+  {
+    id: 3,
+    name: "Gabinete",
+    image: "./src/assets/gabinete-3.jpg",
+    price: 783,
+  },
+  {
+    id: 4,
+    name: "Gabinete",
+    image: "./src/assets/gabinete-4.jpg",
+    price: 500,
+  },
+  {
+    id: 5,
+    name: "Monitor",
+    image: "./src/assets/monitor-1.jpg",
+    price: 990,
+  },
+  {
+    id: 6,
+    name: "Monitor",
+    image: "./src/assets/monitor-2.jpg",
+    price: 800,
+  },
+  {
+    id: 7,
+    name: "Monitor",
+    image: "./src/assets/monitor-3.jpg",
+    price: 890,
+  },
+  {
+    id: 8,
+    name: "Monitor",
+    image: "./src/assets/monitor-4.jpg",
+    price: 758,
+  },
+  {
+    id: 9,
+    name: "Mouse",
+    image: "./src/assets/mouse-1.jpg",
+    price: 200,
+  },
+  {
+    id: 10,
+    name: "Mouse",
+    image: "./src/assets/mouse-2.jpg",
+    price: 250,
+  },
+  {
+    id: 11,
+    name: "Mouse",
+    image: "./src/assets/mouse-3.jpg",
+    price: 140,
+  },
+  {
+    id: 12,
+    name: "Mouse",
+    image: "./src/assets/mouse-4.jpg",
+    price: 190,
+  },
+  {
+    id: 13,
+    name: "Teclado",
+    image: "./src/assets/teclado-1.jpg",
+    price: 300,
+  },
+  {
+    id: 14,
+    name: "Teclado",
+    image: "./src/assets/teclado-2.jpg",
+    price: 289,
+  },
+  {
+    id: 15,
+    name: "Teclado",
+    image: "./src/assets/teclado-3.jpg",
+    price: 320,
+  },
+  {
+    id: 16,
+    name: "Teclado",
+    image: "./src/assets/teclado-4.jpg",
+    price: 350,
+  },
+];
