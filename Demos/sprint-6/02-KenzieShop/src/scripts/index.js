@@ -6,7 +6,9 @@ const localCart = localStorage.getItem("@kenzieShop:cart");
 
 const convertedCart = JSON.parse(localCart);
 
-const cartProducts = convertedCart;
+const cartProducts = convertedCart || [];
+
+// const cartProducts = JSON.parse(localStorage.getItem("@kenzieShop:cart")) || [];
 
 const calculateTotal = (array) => {
   const pTotal = document.querySelector(".cart__total");
@@ -42,8 +44,8 @@ const createCard = (product) => {
     cartProducts.push(product);
 
     const cartJson = JSON.stringify(cartProducts);
-    localStorage.setItem("@kenzieShop:cart", cartJson);
 
+    localStorage.setItem("@kenzieShop:cart", cartJson);
     renderCartCards(cartProducts);
   });
 
@@ -78,10 +80,10 @@ const createCartCard = (product) => {
 
   btnRemoveCart.addEventListener("click", () => {
     const index = cartProducts.indexOf(product);
-
     cartProducts.splice(index, 1);
 
     const cartJson = JSON.stringify(cartProducts);
+
     localStorage.setItem("@kenzieShop:cart", cartJson);
 
     renderCartCards(cartProducts);
