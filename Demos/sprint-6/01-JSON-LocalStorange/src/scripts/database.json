@@ -1,0 +1,12 @@
+{
+    "JSON": "JavaScript Object Notation",
+    "chave": "valor",
+    "lista": [
+        {
+            "nome": "Caio",
+            "idade": 29,
+            "altura": "1.70",
+            "estuda": false
+        }
+    ]
+}
