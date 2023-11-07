@@ -1,0 +1,104 @@
+@import url(./globalStyles.css);
+
+div{
+    height: 100px;
+    width: 100px;
+
+    background-color: rgb(20,32,255);
+    color: white;
+    font-size: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: filter 1s;
+}
+
+div:hover{
+    filter: blur(10px);
+}
+
+.letterK{
+    position: relative;
+
+    animation: rolar 5s infinite; /*Nome da animação - tempo - quantas vezes*/
+}
+.letterE{
+    animation: arredondar 5s infinite;
+}
+.letterN{
+    animation: sumir 5s infinite;
+}
+.letterZ{
+    animation: encolher 5s infinite;
+}
+.letterI{
+    animation: inverter 5s infinite;
+}
+
+@keyframes rolar{
+    0%{
+        left: 0;
+        transform: rotate(0);
+    }
+    50%{
+        left: 88vw;
+        transform: rotate(720deg);
+    }
+    100%{
+        left: 0;
+        transform: rotate(0);
+    }
+}
+
+@keyframes arredondar {
+    0%{
+        border-radius: 0;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 0;
+    }
+}
+
+@keyframes sumir {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes encolher {
+    0%{
+        transform: scale(1);
+    }   
+    50%{
+        transform: scale(0);
+    }  
+    100%{
+        transform: scale(1);
+    }       
+}
+
+@keyframes inverter {
+    0%{
+        background-color: rgb(20,32,255);
+        color: white;
+    }  
+    50%{
+        background-color: white;
+        color: rgb(20,32,255);
+    }  
+    100%{
+        background-color: rgb(20,32,255);
+        color: white;
+    }  
+}
