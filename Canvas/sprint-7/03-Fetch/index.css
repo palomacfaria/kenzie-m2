@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    max-width: 400px;
+    border: 2px solid #242427;
+    padding: 1rem;
+}
+img{
+    max-width: 100%;
+}
