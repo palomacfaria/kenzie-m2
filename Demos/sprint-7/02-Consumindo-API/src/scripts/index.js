@@ -1,3 +1,4 @@
-import { getArticles } from "./request.js";
+import { getArticles, getMoreArticles } from "./request.js";
 
 getArticles();
+getMoreArticles();
