@@ -1,7 +1,15 @@
-import { getArticles, getMoreArticles } from "./request.js";
-import { initialRender } from "./render.js";
+import { initialRender, viewMore, lastVisited } from "./render.js";
+
+const viewMoreEvent = () => {
+  const moreBtn = document.querySelector("#newsMore");
+  let count = 10;
+
+  moreBtn.addEventListener("click", () => {
+    viewMore(count);
+    count += 10;
+  });
+};
 
 initialRender();
-
-getArticles();
-getMoreArticles();
+viewMoreEvent();
+lastVisited();

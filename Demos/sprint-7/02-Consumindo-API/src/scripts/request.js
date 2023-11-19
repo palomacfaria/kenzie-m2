@@ -20,7 +20,7 @@ export const getArticles = async () => {
     return res.json();
   });
 
-  //   console.log(result.results);
+  // console.log(result.results);
   return result.results;
 };
 
